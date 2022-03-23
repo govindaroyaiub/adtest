@@ -38,7 +38,8 @@
     max-width: 400px;
 }
 
-#top_left_down, #tab_right_top_down {
+#top_left_down,
+#tab_right_top_down {
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -53,7 +54,7 @@
     margin-left: 0.15px;
 }
 
-#top_arrow{
+#top_arrow {
     position: absolute;
     top: 7px;
     left: 10px;
@@ -129,7 +130,7 @@
     background-color: rgba(238, 237, 237, 0.8);
 }
 
-.interscrollerSection{
+.interscrollerSection {
     position: relative;
     width: 100%;
     height: auto;
@@ -140,7 +141,7 @@
     padding: 5px 0 5px 0;
 }
 
-.interscrollerTop{
+.interscrollerTop {
     position: relative;
     width: 100%;
     height: auto;
@@ -152,7 +153,7 @@
     flex: 1;
 }
 
-.interscrollerTopTab{
+.interscrollerTopTab {
     position: absolute;
     top: 0px;
     right: 0;
@@ -161,7 +162,7 @@
     margin-top: 1px;
 }
 
-.interscrollerMiddle{
+.interscrollerMiddle {
     position: relative;
     width: 100%;
     height: auto;
@@ -174,7 +175,7 @@
     flex: 1;
 }
 
-.interscrollerBottom{
+.interscrollerBottom {
     position: relative;
     width: 100%;
     height: auto;
@@ -186,7 +187,7 @@
     flex: 1;
 }
 
-#interscrollerPlanetnine{
+#interscrollerPlanetnine {
     position: absolute;
     top: 0px;
     left: 0;
@@ -195,7 +196,7 @@
 }
 
 
-.interscrollerBottomTab{
+.interscrollerBottomTab {
     position: absolute;
     top: 0px;
     right: 0;
@@ -205,7 +206,7 @@
 }
 
 
-#interscrollerTabRight{
+#interscrollerTabRight {
     position: absolute;
     top: 0px;
     right: 0;
@@ -236,11 +237,13 @@
     -o-transform: rotate(180deg);
 }
 
-#video_image{
+#video_image {
+    position: relative;
     width: 80%;
+    margin-top: 2px;
 }
 
-.videoSection{
+.videoSection {
     position: relative;
     width: 100%;
     height: auto;
@@ -248,10 +251,10 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    padding: 5px 0 15px 0;
+    padding: 5px 0 5px 0;
 }
 
-.videoTop{
+.videoTop {
     position: relative;
     width: 100%;
     height: auto;
@@ -263,7 +266,7 @@
     flex: 1;
 }
 
-.videoTopTab{
+.videoTopTab {
     position: absolute;
     top: 0px;
     right: 0;
@@ -272,24 +275,24 @@
     height: auto;
 }
 
-.videoMiddle{
+.videoMiddle {
     position: relative;
     width: 100%;
     height: auto;
     top: 0;
     left: 0;
-    background-color: whitesmoke;
+    background-color:  rgba(238, 237, 237, 0.8);
     justify-content: center;
     text-align: center;
     padding: 15px 0 15px 0;
     flex: 1;
 }
 
-#videoBanner{
+#videoBanner {
     position: relative;
 }
 
-.videoBottom{
+.videoBottom {
     position: relative;
     width: 100%;
     height: auto;
@@ -302,7 +305,7 @@
     margin-top: 1px;
 }
 
-#videoPlanetnine{
+#videoPlanetnine {
     position: absolute;
     top: 0px;
     left: 0;
@@ -311,10 +314,42 @@
     height: auto;
 }
 
-#videoTabRight{
+#videoTabRight {
     position: absolute;
     top: 0px;
     right: 0;
     width: 14%;
     height: auto;
+}
+
+#videoArrowTopRight {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 30%;
+    left: 50%;
+    transform-origin: center;
+}
+
+.videoBottomTab {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 13%;
+    height: auto;
+    margin-top: 1px;
+}
+
+#videoArrowBottomRight {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 18%;
+    left: 50%;
+    transform-origin: center;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
 }
