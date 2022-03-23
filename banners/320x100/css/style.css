@@ -1,0 +1,64 @@
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+body{
+	margin: 0;
+  padding: 0;
+}
+
+img{
+  display: none;
+  position: absolute;
+  width: 320px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+#banner{
+position: relative;	
+width:320px;
+height:100px;
+overflow: hidden;
+cursor: pointer;
+border: 1px solid #d7d7d7;
+box-sizing: border-box;
+}
+
+.cta{
+  transform: translateX(-220px);
+  -webkit-transform: translateX(-220px);
+  transform-origin: 78px 67px;
+}
+
+.arrow {
+  transform: translateX(-220px);
+  -webkit-transform: translateX(-220px);
+}
+
+.nu_text{
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    opacity: 0;
+}
+
+.person {
+  transform: translateX(-190px);
+  -webkit-transform: translateX(-190px);
+  opacity: 0;
+}
+
+.logo {
+  transform: translateX(180px);
+  -webkit-transform: translateX(180px);
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sky - Radio 10</title>
+<meta name="ad.size" content="width=320,height=100">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+</head>
+
+<body onload="myFunction()">
+
+<div id="banner">
+    <div id="bg"></div>
+    <img src="assets/bg.png" class="bg">
+    <img src="assets/logo.png" class="logo">
+    <img src="assets/f1_nu_text.png" class="nu_text">
+
+    <img src="assets/cta.png" class="cta">
+    <img src="assets/arrow.png" class="arrow">
+</div>
+
+
+<script>
+    
+    function myFunction() {
+        var tl = gsap.timeline({ repeat: -1, repeatDelay: 3});
+
+        tl
+            .to('img', { duration: 0, display:'block' })
+            .add('f1', '+=0.2')
+            .to('.nu_text', { duration: 0.4, opacity: 1, x: 0, ease: 'power2.out' }, 'f1')
+            .to('.logo', { duration: 0.4, x: 0, ease: 'power2.out' },'f1')
+
+            .to('.cta, .arrow', { duration: 0.5, x: 0, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: 3, ease: 'power2.out',delay:.5})
+            .to('.arrow', { duration: 0.3, x: -1, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: 3, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: -1, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: 3, ease: 'power2.out',delay:.3})
+            .to('.arrow', { duration: 0.3, x: -1, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: 3, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: -1, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: 3, ease: 'power2.out',delay:.3})
+            .to('.arrow', { duration: 0.3, x: -1, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: 3, ease: 'power2.out'})
+            .to('.arrow', { duration: 0.3, x: 0, ease: 'power2.out'})
+
+    }
+</script>
+
+
+<!-- DCM Code -->
+<script type="text/javascript">
+    var clickTag = "https://www.radio10.nl/80s-top-810/";
+    var banner = document.getElementById("banner");
+    banner.style.cursor = "pointer";
+
+    banner.addEventListener("click", goURL);
+
+    function goURL() {
+      window.open(clickTag);
+    }
+</script>
+
+</body>
+</html>

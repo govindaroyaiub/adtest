@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'SkyRegular';
+  src: url('../fonts/Sky-Regular.woff2');
+}
+
+
+@font-face {
+  font-family: 'SkyBold';
+  src: url('../fonts/Sky-Bold.woff2');
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+body{
+	margin: 0;
+  padding: 0;
+}
+
+img{
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  top: 0;
+  left: 0;
+}
+
+#banner{
+position: relative;	
+width:300px;
+height:50px;
+overflow: hidden;
+cursor: pointer;
+border: 1px solid #d7d7d7;
+box-sizing: border-box;
+}
+
+.cta{
+  transform: translateX(-230px);
+  -webkit-transform: translateX(-230px);
+  transform-origin: 161px 25px;
+  -webkit-transform-origin: 161px 25px;
+}
+
+.text {
+  transform: translateX(-230px);
+  -webkit-transform: translateX(-230px);
+}
+
+.now_playing{
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  transform-origin: 35px 11px;
+  -webkit-transform-origin: 35px 11px;
+  
+}
+
+.logo {
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  transform-origin: 151px 25px;
+  -webkit-transform-origin: 151px 25px;
+}
+
+.small_logo {
+  opacity: 1;
+}
+
+.t1 {
+  transform: translateX(-40px);
+  -webkit-transform: translateX(-40px);
+  opacity: 0;
+}
+
+
+#title {
+  position: absolute;
+  top: 18px;
+  left: 9px;
+  font-family: "SkyBold", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 55%;
+  line-height: 1.1;
+}
+
+#artistname {
+  position: absolute;
+  top: 34px;
+  left: 9px;
+  font-family: 'SkyRegular', sans-serif;
+  font-size: 10px;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 55%;
+}

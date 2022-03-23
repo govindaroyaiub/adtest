@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sky Radio</title>
+<meta name="ad.size" content="width=300,height=50">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+</head>
+
+<body onload="myFunction()">
+
+<div id="banner">
+    <img src="assets/bg.jpg" class="bg">
+    <img src="assets/logo.png" class="logo">
+    <img src="assets/text.png" class="text">
+    <img src="assets/now_playing.png" class="now_playing">
+    <div class="title t1" id="title"></div>
+    <div class="artist_name t1" id="artistname"></div>
+    <img src="assets/cta.png" class="cta">
+</div>
+
+
+<script>
+    
+    function myFunction() {
+        var tl = gsap.timeline({ repeat: -1, repeatDelay: 3});
+
+        radiosApi();
+
+        tl
+            .to('img', { duration: 0, display:'block' })
+            .add('f1', '+=0.2')
+            .to('.logo', { duration: 0.5, scale: 1, ease: 'back' }, 'f1')
+            .add('f2', '+=1')
+            .to('.logo', { duration: 0.5, scale: 1, x: 115, ease: 'power2.out' },'f2')
+            .to('.cta', { duration: 0.5, x: 0, opacity: 1, ease: 'power2.out'},'f2+=0.1')
+            .to('.text', { duration: 0.5, x: 0, opacity: 1, ease: 'power2.out' },'f2+=0.22')
+
+            .to('.cta', { duration: 0.2, scale: 1.05, ease: 'power2.out',delay:.5})
+            .to('.cta', { duration: 0.2, scale: 1, ease: 'power2.out'})
+            .to('.cta', { duration: 0.2, scale: 1.05, ease: 'power2.out'})
+            .to('.cta', { duration: 0.2, scale: 1, ease: 'power2.out'})
+            .to('.cta', { duration: 0.2, scale: 1.05, ease: 'power2.out',delay:.3})
+            .to('.cta', { duration: 0.2, scale: 1, ease: 'power2.out'})
+            .to('.cta', { duration: 0.2, scale: 1.05, ease: 'power2.out'})
+            .to('.cta', { duration: 0.2, scale: 1, ease: 'power2.out'})
+
+            .add('f3', '+=1')
+            .to('.text', { duration: 0.5, y: 60, opacity: 0, ease: 'power2.out' },'f3')
+
+            .to('.cta', { duration: 0.5, y: 60, ease: 'power2.out' },'f3+=0.12')
+
+            .to('.now_playing', { duration: 0.5, scale: 1, opacity: 1, ease: 'power2.out' },'f3+=0.2')
+
+            .to('.t1', { duration: 0.5, opacity: 1, stagger: 0.12, x: 0, ease: 'power2.out'},'f3+=0.45')
+
+
+
+            function radiosApi() {
+
+                const url = "https://graph.talparad.io/?query=%7B%0A%20%20getStation%28profile%3A%20%22default%22%2C%20slug%3A%20%22sky-radio%22%29%7B%0A%20%20%20%20playouts%28profile%3A%20%22default%22%2C%20limit%3A%201%29%20%7B%0A%20%20%20%20%20%09broadcastDate%0A%20%20%20%20%20%20track%7B%0A%20%20%20%20%20%20%20%20artistName%0A%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20images%20%7B%0A%20%20%20%20%20%20%20%20%20%20uri%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D";
+
+                const key = `da2-bvmhv52heveqxltvhqvfeeimce`;
+
+                fetch(url, {
+                    headers: new Headers({
+                        'x-api-key': 'da2-bvmhv52heveqxltvhqvfeeimce'
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+
+                
+                var artistVar = document.querySelector('.artist_name');
+                var titleVar = document.querySelector('.title'); 
+
+                var { artistName, title } = data.data.getStation.playouts[0].track; 
+
+// var artistName = 'One Republic Moves All The Right Moves Right Moves';
+// var title = ' All The Right Moves All The Right Moves Right Moves';
+
+                function makeCapitilize(str) {
+                    var splited = str.split(' ');
+                    for (var i = 0; i < splited.length; i++) {
+                        splited[i] = splited[i].charAt(0).toUpperCase() + splited[i].substring(1);
+                    }
+                    return splited.join(' ');
+                }
+
+                var artistCapitalName = makeCapitilize(String(artistName));
+                var titleCapitalName = makeCapitilize(String(title));
+
+                var artistCapitalNameModify = artistCapitalName.replace(/ \([^)]*\) */g, " ").trim();
+                var titleCapitalNameModify = titleCapitalName.replace(/ \([^)]*\) */g, " ").trim();  
+
+                artistVar.textContent = artistCapitalNameModify;
+                titleVar.textContent = titleCapitalNameModify; 
+                
+            })
+
+            }
+
+            setInterval(function() {
+                radiosApi();
+            }, 30000)
+
+    }
+</script>
+
+
+<!-- DCM Code -->
+<script type="text/javascript">
+    var clickTag = "https://www.skyradio.nl/";
+    var banner = document.getElementById("banner");
+    banner.style.cursor = "pointer";
+
+    banner.addEventListener("click", goURL);
+
+    function goURL() {
+      window.open(clickTag);
+    }
+</script>
+
+</body>
+</html>

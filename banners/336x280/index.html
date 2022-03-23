@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>Decathlon</title>
+
+    <!--META TAG-->
+    <meta name="ad.size" content="width=336,height=280">
+
+    <!--CUSTOM STYLE-->
+    <link rel="stylesheet" href="css/style.css">
+
+<body onload="myFunc()">
+
+<div id="banner">
+    
+    
+
+    <img src="assets/bg.jpg" id="bg">
+    <img src="assets/f1_title1.png" class="f1_title frame1">
+    <img src="assets/f1_title2.png" class="f1_title frame1"> 
+    <img src="assets/logo.png" id="logo" class="frame1">  
+
+    <img src="assets/bg_1.jpg" id="bg_1" class="frame4">
+    <img src="assets/bg_2.jpg" id="bg_2" class="frame4">
+    <img src="assets/bg_3.jpg" id="bg_3" class="frame4">
+    <img src="assets/bottom_shape.png" id="shade_1" class="frame4">
+    
+    <img src="assets/map.png" id="map" class="map">
+
+    <img src="assets/loc1.png" id="loc1" class="loc_1">
+    <img src="assets/loc2.png" id="loc2" class="loc">
+    <img src="assets/loc3.png" id="loc3" class="loc_2">
+    <img src="assets/loc4.png" id="loc4" class="loc_1">
+    <img src="assets/loc5.png" id="loc5" class="loc">
+    <img src="assets/loc6.png" id="loc6" class="loc_1">
+    <img src="assets/loc7.png" id="loc7" class="loc">
+    <img src="assets/loc8.png" id="loc8" class="loc_1">
+    <img src="assets/loc9.png" id="loc9" class="loc">
+    <img src="assets/loc10.png" id="loc10" class="loc_2">
+    <img src="assets/loc11.png" id="loc11" class="loc">
+    <img src="assets/loc12.png" id="loc12" class="loc_2">
+    <img src="assets/loc13.png" id="loc13" class="loc">
+    <img src="assets/loc14.png" id="loc14" class="loc_2">
+    <img src="assets/loc15.png" id="loc15" class="loc">
+
+    
+
+    <img src="assets/f2_t.png" class="f2_t frame4">   
+    <img src="assets/f3_t.png" class="f3_t frame4">   
+     <img src="assets/f4_t.png" class="f4_t frame4"> 
+
+   <img src="assets/f5_t1.png" class="f5_t">   
+    <img src="assets/f5_t2.png" class="f5_t">   
+    <img src="assets/f5_t3.png" class="f5_t">   
+
+    <img src="assets/logo2.png" id="logo2">
+    <img src="assets/cta.png" id="cta" class="cta">
+    
+    
+</div><!--END OF /. BANNER-->
+
+<!--CUSTOM SCRIPT-->
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+
+<script>
+    var t1 = gsap.timeline({ repeat: -1, repeatDelay: 2.5 });
+  
+    function myFunc() {
+        t1
+        .to('img', { duration: 0, display: 'block' })  
+        
+        
+        .to('.f1_title', {duration: 0.5, opacity: 1, y: 0, stagger: 0.15, ease: 'power3.out'})
+        .to('#logo', {duration: 0.5, scale: 1, opacity :1, ease: 'power4.in'},'-=.5')
+
+        .to('#bg_1, #shade_1', {duration: 0.5, opacity :1, x:0, ease: 'power3.out'},'+=.5')
+        .to('.f2_t', {duration: 0.5, x:0, ease: 'power3.out'},'-=.3')
+        .to('.frame1', {duration: 0.5, opacity :0, ease: 'none'},'-=.5')
+
+        .add('f2', '+=.75') 
+        .to('#bg_2', {duration: 0.5, opacity :1, ease: 'power3.out'},'f2')
+        .to('.f2_t', {duration: 0.5, opacity :0, ease: 'none'},'f2-=.5')
+        .to('.f3_t', {duration: 0.5, x:0, ease: 'power3.out'},'-=.3')
+
+        .add('f3', '+=.75') 
+        .to('#bg_3', {duration: 0.5, opacity :1, ease: 'power3.out'},'f3')
+        .to('.f3_t', {duration: 0.5, opacity :0, ease: 'none'},'f3-=.5')
+        .to('.f4_t', {duration: 0.5, x:0, ease: 'power3.out'},'-=.3')
+
+        .to('.frame4', {duration: 0.5, opacity :0, ease: 'none'},'+=.5')
+
+        .to('#logo2', {duration: 0.5, scale: 1, opacity :1, ease: 'power4.in'},'-=.5')
+        .to('.f5_t', {duration: 0.5, opacity: 1, y: 0, stagger: 0.15, ease: 'power3.out'})
+       
+
+        .to('#map', {duration: 0.5, opacity :1, ease: 'none'},'-=.5')
+
+        .add('f5')
+        .to('.loc_1', {duration: 0.5, scale: 1, stagger: 0.15, ease: 'back.out'},'f5+=.1')
+        .to('.loc', {duration: 0.5, scale: 1, stagger: 0.15, ease: 'back.out'},'f5-=.3')
+        .to('.loc_2', {duration: 0.5, scale: 1, stagger: 0.15, ease: 'back.out'},'f5-=.1')
+
+        
+        .to('.cta', {duration: 0.5, scale: 1, ease: 'power3.out'},'f5')
+        .to('.cta', {duration: 0.25, scale:1.1, yoyo: true, repeat: 3, ease: 'power3.inout'},'f5+=.8')
+    }
+</script>
+<!-- DCM Code -->
+<script type="text/javascript">
+    var clickTag = "https://www.decathlon.nl/";
+    var banner = document.getElementById("banner");
+    banner.style.cursor = "pointer";
+    banner.addEventListener("click", goURL);
+    function goURL() {
+        window.open(clickTag);
+    }
+
+
+</script>
+
+
+</body>
+</html>

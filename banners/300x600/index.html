@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>Decathlon</title>
+
+    <!--META TAG-->
+    <meta name="ad.size" content="width=300,height=600">
+
+    <!--CUSTOM STYLE-->
+    <link rel="stylesheet" href="css/style.css">
+
+<body onload="myFunc()">
+
+<div id="banner">
+    
+    <img src="assets/bg_4.jpg" id="bg_4" class="frame4">
+    <img src="assets/bg_3.jpg" id="bg_3" class="frame3">
+    <img src="assets/bg_2.jpg" id="bg_2" class="frame2">
+    <img src="assets/bg_1.jpg" id="bg_1" class="frame1">
+
+    <img src="assets/f1_title.png" class="f1_title">
+
+    <img src="assets/f2_title.png" class="f2_title"> 
+    <img src="assets/f3_title.png" class="f3_title"> 
+
+    <img src="assets/logo.png" id="logo" class="frame1">  
+
+</div><!--END OF /. BANNER-->
+
+<!--CUSTOM SCRIPT-->
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+
+<script>
+    var t1 = gsap.timeline({ repeat: -1, repeatDelay: 2.5 });
+  
+    function myFunc() {
+        t1
+        .to('img', { duration: 0, display: 'block' })  
+        
+        .to('.f1_title', {duration: 0.5, opacity: 1, y: 0, stagger: 0.15, ease: 'power3.out'})
+        .to('.frame1', {duration: 0.5, opacity :0, ease: 'none'},'+=.6')
+
+        .add('f2')
+        .to('.f1_title', {duration: 0.5, opacity: 1, x: -28, y:-14, ease: 'power3.out'},'f2')
+        .to('.f2_title', {duration: 0.5, opacity: 1, x: 0, ease: 'power3.out'},'f2')
+        .to('.frame2', {duration: 0.5, opacity :0, ease: 'none'},'+=.6')
+
+        .add('f3')
+        .to('.f1_title', {duration: 0.5, opacity: 1, y: -18, ease: 'power3.out'},'f3')
+        .to('.f2_title', {duration: 0.5, opacity: 1, y: -4, ease: 'power3.out'},'f3')
+        .to('.f3_title', {duration: 0.5, opacity: 1, y: 0, ease: 'power3.out'},'f3')
+        .to('.frame3', {duration: 0.5, opacity :0, ease: 'none'},'+=.6')
+
+        // .to('.f4_title', {duration: 0.5, opacity: 1, y: 0, stagger: 0.15, ease: 'power3.out'})
+        .to('#logo', {duration: 0.5, scale: 1, opacity :1, ease: 'power4.in'},'-=.5')
+
+        
+    }
+</script>
+<!-- DCM Code -->
+<script type="text/javascript">
+    var clickTag = "https://www.decathlon.nl/";
+    var banner = document.getElementById("banner");
+    banner.style.cursor = "pointer";
+    banner.addEventListener("click", goURL);
+    function goURL() {
+        window.open(clickTag);
+    }
+
+
+</script>
+
+
+</body>
+</html>
