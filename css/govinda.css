@@ -4,352 +4,449 @@
     --sspp-interscroller-element-top: 100px;
 }
 
-.topbannerSection {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: -11px;
-    z-index: 100;
-    transform: translateY(68%);
-    -webkit-transform: translateY(68%);
-    -moz-transform: translateY(68%);
-    -ms-transform: translateY(68%);
-    -o-transform: translateY(68%);
+@media only screen and (min-width: 960px) {
+    /* styles for browsers larger than 960px; */
 }
 
-.stickyBannerTop1 {
-    width: 100%;
-    flex: 1;
-    height: auto;
-    padding: 6px 0 0px 0;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(238, 237, 237, 0.8);
-    box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%) !important;
+@media only screen and (min-width: 1440px) {
+
+    #mobileBottomBanner{
+        display: none;
+    }
+    .bottomBannerSection {
+        display: flex;
+        flex-direction: column;
+        width: 66%;
+        position: fixed;
+        text-align: center;
+        left: 17%;
+        z-index: 1000;
+        justify-content: center;
+        bottom: -250px;
+        top: auto;
+        transform: translateY(-80%);
+        -webkit-transform: translateY(-80%);
+        -moz-transform: translateY(-80%);
+        -ms-transform: translateY(-80%);
+        -o-transform: translateY(-80%);
+    }
+
+    .stickyBannerBottom1 {
+        position: relative;
+        top: 6px;
+    }
+
+    #bottomPlanetnine {
+        position: relative;
+        top: 0;
+        float: left;
+        width: 14%;
+        height: auto;
+        margin-left: 0.15px;
+    }
+
+    #bottomSlider {
+        position: relative;
+        top: 0;
+        width: 6%;
+        float: right;
+        color: black;
+        margin-right: 0.15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #arrow_bottom_right_top {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 30%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .stickyBannerBottom2 {
+        width: 100%;
+        flex: 1;
+        height: auto;
+        padding: 6px 0 2px 0;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(238, 237, 237, 0.8);
+    }
 }
 
-.stickyBannerTop2 {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    position: relative;
-    max-width: 400px;
+@media only screen and (min-width: 2000px) {
+    /* for sumo sized (mac) screens */
 }
 
-#top_left_down,
-#tab_right_top_down {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
+@media only screen and (max-device-width: 480px) {
+
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .topbannerSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: -11px;
+        z-index: 100;
+        transform: translateY(68%);
+        -webkit-transform: translateY(68%);
+        -moz-transform: translateY(68%);
+        -ms-transform: translateY(68%);
+        -o-transform: translateY(68%);
+    }
+
+    .stickyBannerTop1 {
+        width: 100%;
+        flex: 1;
+        height: auto;
+        padding: 6px 0 0px 0;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(238, 237, 237, 0.8);
+        box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%) !important;
+    }
+
+    .stickyBannerTop2 {
+        flex: 1;
+        width: 100%;
+        height: auto;
+        position: relative;
+        max-width: 400px;
+    }
+
+    #top_left_down,
+    #tab_right_top_down {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+    }
+
+    #tab_bottom_left {
+        position: relative;
+        width: 14%;
+        height: auto;
+        bottom: 0;
+        left: 0;
+        margin-left: 0.15px;
+    }
+
+    #top_arrow {
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        width: 5%;
+        height: auto;
+        transform: rotate(180deg);
+        transform-origin: center;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+
+    .bottomBannerSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        left: 0;
+        z-index: 1000;
+        justify-content: center;
+        bottom: -122px;
+        top: auto;
+        transform: translateY(-80%);
+        -webkit-transform: translateY(-80%);
+        -moz-transform: translateY(-80%);
+        -ms-transform: translateY(-80%);
+        -o-transform: translateY(-80%);
+    }
+
+    .stickyBannerBottom1 {
+        position: relative;
+        top: 6px;
+    }
+
+    #bottomPlanetnine {
+        position: relative;
+        top: 0;
+        float: left;
+        width: 14%;
+        height: auto;
+        margin-left: 0.15px;
+    }
+
+    #bottomSlider {
+        position: relative;
+        top: 0;
+        width: 14%;
+        float: right;
+        color: black;
+        margin-right: 0.15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #arrow_bottom_right_top {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 30%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .stickyBannerBottom2 {
+        width: 100%;
+        flex: 1;
+        height: auto;
+        padding: 6px 0 2px 0;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(238, 237, 237, 0.8);
+    }
+
+    .interscrollerSection {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 5px 0;
+    }
+
+    .interscrollerTop {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0 12px 0;
+        flex: 1;
+    }
+
+    .interscrollerTopTab {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 13%;
+        height: auto;
+        margin-top: 1px;
+    }
+
+    .interscrollerMiddle {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        background-color: whitesmoke;
+        justify-content: center;
+        text-align: center;
+        padding: 15px 0 15px 0;
+        flex: 1;
+    }
+
+    .interscrollerBottom {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0 12px 0;
+        flex: 1;
+    }
+
+    #interscrollerPlanetnine {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 13%;
+        height: auto;
+    }
+
+
+    .interscrollerBottomTab {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 13%;
+        height: auto;
+        margin-top: 1px;
+    }
+
+
+    #interscrollerTabRight {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 13%;
+        height: auto;
+    }
+
+    #interscrollerArrowTopRight {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 30%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    #interscrollerArrowBottomRight {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 18%;
+        left: 50%;
+        transform-origin: center;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+
+    #video_image {
+        position: relative;
+        width: 80%;
+        margin-top: 2px;
+    }
+
+    .videoSection {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 5px 0;
+    }
+
+    .videoTop {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0 12px 0;
+        flex: 1;
+    }
+
+    .videoTopTab {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        z-index: 100;
+        width: 13%;
+        height: auto;
+    }
+
+    .videoMiddle {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        background-color: rgba(238, 237, 237, 0.8);
+        justify-content: center;
+        text-align: center;
+        padding: 15px 0 15px 0;
+        flex: 1;
+    }
+
+    #videoBanner {
+        position: relative;
+    }
+
+    .videoBottom {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0 12px 0;
+        flex: 1;
+        margin-top: 1px;
+    }
+
+    #videoPlanetnine {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 100;
+        width: 14%;
+        height: auto;
+    }
+
+    #videoTabRight {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 14%;
+        height: auto;
+    }
+
+    #videoArrowTopRight {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 30%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .videoBottomTab {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 13%;
+        height: auto;
+        margin-top: 1px;
+    }
+
+    #videoArrowBottomRight {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 18%;
+        left: 50%;
+        transform-origin: center;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+
+    #desktopBottomBanner{
+        display: none;
+    }
 }
 
-#tab_bottom_left {
-    position: relative;
-    width: 14%;
-    height: auto;
-    bottom: 0;
-    left: 0;
-    margin-left: 0.15px;
+@media only screen and (device-width: 768px) {
+    /* default iPad screens */
 }
 
-#top_arrow {
-    position: absolute;
-    top: 7px;
-    left: 10px;
-    width: 5%;
-    height: auto;
-    transform: rotate(180deg);
-    transform-origin: center;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
 }
 
-.bottomBannerSection {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: fixed;
-    text-align: center;
-    left: 0;
-    z-index: 1000;
-    justify-content: center;
-    bottom: -122px;
-    top: auto;
-    transform: translateY(-80%);
-    -webkit-transform: translateY(-80%);
-    -moz-transform: translateY(-80%);
-    -ms-transform: translateY(-80%);
-    -o-transform: translateY(-80%);
-}
-
-.stickyBannerBottom1 {
-    position: relative;
-    top: 6px;
-}
-
-#bottomPlanetnine {
-    position: relative;
-    top: 0;
-    float: left;
-    width: 14%;
-    height: auto;
-    margin-left: 0.15px;
-}
-
-#bottomSlider {
-    position: relative;
-    top: 0;
-    width: 14%;
-    float: right;
-    color: black;
-    margin-right: 0.15px;
-    align-items: center;
-    justify-content: center;
-}
-
-#arrow_bottom_right_top {
-    position: absolute;
-    width: 30%;
-    height: auto;
-    top: 30%;
-    left: 50%;
-    transform-origin: center;
-}
-
-.stickyBannerBottom2 {
-    width: 100%;
-    flex: 1;
-    height: auto;
-    padding: 6px 0 2px 0;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(238, 237, 237, 0.8);
-}
-
-.interscrollerSection {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 5px 0 5px 0;
-}
-
-.interscrollerTop {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 12px 0 12px 0;
-    flex: 1;
-}
-
-.interscrollerTopTab {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 13%;
-    height: auto;
-    margin-top: 1px;
-}
-
-.interscrollerMiddle {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    background-color: whitesmoke;
-    justify-content: center;
-    text-align: center;
-    padding: 15px 0 15px 0;
-    flex: 1;
-}
-
-.interscrollerBottom {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 12px 0 12px 0;
-    flex: 1;
-}
-
-#interscrollerPlanetnine {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 13%;
-    height: auto;
-}
-
-
-.interscrollerBottomTab {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 13%;
-    height: auto;
-    margin-top: 1px;
-}
-
-
-#interscrollerTabRight {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 13%;
-    height: auto;
-}
-
-#interscrollerArrowTopRight {
-    position: absolute;
-    width: 30%;
-    height: auto;
-    top: 30%;
-    left: 50%;
-    transform-origin: center;
-}
-
-#interscrollerArrowBottomRight {
-    position: absolute;
-    width: 30%;
-    height: auto;
-    top: 18%;
-    left: 50%;
-    transform-origin: center;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-}
-
-#video_image {
-    position: relative;
-    width: 80%;
-    margin-top: 2px;
-}
-
-.videoSection {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 5px 0 5px 0;
-}
-
-.videoTop {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 12px 0 12px 0;
-    flex: 1;
-}
-
-.videoTopTab {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    z-index: 100;
-    width: 13%;
-    height: auto;
-}
-
-.videoMiddle {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    background-color:  rgba(238, 237, 237, 0.8);
-    justify-content: center;
-    text-align: center;
-    padding: 15px 0 15px 0;
-    flex: 1;
-}
-
-#videoBanner {
-    position: relative;
-}
-
-.videoBottom {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 12px 0 12px 0;
-    flex: 1;
-    margin-top: 1px;
-}
-
-#videoPlanetnine {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    z-index: 100;
-    width: 14%;
-    height: auto;
-}
-
-#videoTabRight {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 14%;
-    height: auto;
-}
-
-#videoArrowTopRight {
-    position: absolute;
-    width: 30%;
-    height: auto;
-    top: 30%;
-    left: 50%;
-    transform-origin: center;
-}
-
-.videoBottomTab {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 13%;
-    height: auto;
-    margin-top: 1px;
-}
-
-#videoArrowBottomRight {
-    position: absolute;
-    width: 30%;
-    height: auto;
-    top: 18%;
-    left: 50%;
-    transform-origin: center;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
 }

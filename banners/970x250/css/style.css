@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#banner {
+  position: relative;
+  width: 970px;
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #ffff;
+  overflow: hidden;
+  border: 1px solid #d0d0d0ab;
+  -webkit-box-sizing: border-box;
+}
+
+img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 970px;
+  height: 250px;
+  display: none;
+}
+
+#deka_logo2,
+#key_visual_all,
+#deka_logo {
+  opacity: 0;
+}
+
+#deka_logo,
+#deka_logo2,
+#logo2,
+.allen,
+.beste,
+.voor,
+.feest,
+.degan,
+.stars{
+  opacity: 0;
+}
+
+#key_visual_all {
+  transform: translate(-168px, 4px) scale(.95);
+  opacity: 0;
+}
+
+#key_visual2 {
+  transform-origin: 487px 126px;
+  transform: rotate(48deg);
+  opacity: 0;
+}
+
+#cta {
+  transform: translateY(100px);
+}
+
+#product_text {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+#product {
+  opacity: 0;
+  transform: translate(30px, 20px);
+}

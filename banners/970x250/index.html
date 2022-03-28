@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dekamart</title>
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=970,height=250">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+</head>
+<body onload="myFunction()">
+
+    <div id="banner">
+        <img src="assets/bg.jpg" alt="bg" id="bg">
+        <img src="assets/deka_logo2.png" alt="deka_logo2" id="deka_logo2">
+        <img src="assets/deka_logo.png" alt="deka_logo" id="deka_logo">
+        
+        <div id="key_visual_all">
+            <img src="assets/key_visual1.png" alt="key_visual1" id="key_visual1" class="key_visual">
+        
+            <img src="assets/allen1.png" alt="allen1" id="allen1" class="allen">
+            <img src="assets/allen2.png" alt="allen2" id="allen2" class="allen">
+            <img src="assets/allen3.png" alt="allen3" id="allen3" class="allen">
+            <img src="assets/allen4.png" alt="allen4" id="allen4" class="allen">
+            <img src="assets/allen5.png" alt="allen5" id="allen5" class="allen">
+            <img src="assets/allen6.png" alt="allen6" id="allen6" class="allen">
+            <img src="assets/allen7.png" alt="allen7" id="allen7" class="allen">
+            <img src="assets/allen8.png" alt="allen8" id="allen8" class="allen">
+            <img src="assets/allen9.png" alt="allen9" id="allen9" class="allen">
+    
+            <img src="assets/beste1.png" alt="beste1" id="beste1" class="beste">
+            <img src="assets/beste2.png" alt="beste2" id="beste2" class="beste">
+            <img src="assets/beste3.png" alt="beste3" id="beste3" class="beste">
+            <img src="assets/beste4.png" alt="beste4" id="beste4" class="beste">
+            <img src="assets/beste5.png" alt="beste5" id="beste5" class="beste">
+    
+            <img src="assets/voor1.png" alt="voor1" id="voor1" class="voor">
+            <img src="assets/voor2.png" alt="voor2" id="voor2" class="voor">
+            <img src="assets/voor3.png" alt="voor3" id="voor3" class="voor">
+            <img src="assets/voor4.png" alt="voor4" id="voor4" class="voor">
+            <img src="assets/voor5.png" alt="voor5" id="voor5" class="voor">
+            <img src="assets/voor6.png" alt="voor6" id="voor6" class="voor">
+    
+            <img src="assets/feest1.png" alt="feest1" id="feest1" class="feest">
+            <img src="assets/feest2.png" alt="feest2" id="feest2" class="feest">
+            <img src="assets/feest3.png" alt="feest3" id="feest3" class="feest">
+            <img src="assets/feest4.png" alt="feest4" id="feest4" class="feest">
+            <img src="assets/feest5.png" alt="feest5" id="feest5" class="feest">
+    
+            <img src="assets/dagen1.png" alt="degan1" id="degan1" class="degan">
+            <img src="assets/dagen2.png" alt="degan2" id="degan2" class="degan">
+            <img src="assets/dagen3.png" alt="degan3" id="degan3" class="degan">
+            <img src="assets/dagen4.png" alt="degan4" id="degan4" class="degan">
+            <img src="assets/dagen5.png" alt="degan5" id="degan5" class="degan">
+    
+            <img src="assets/key_visual2.png" alt="key_visual2" id="key_visual2" class="key_visual">
+
+        </div>
+        <img src="assets/logo2.png" alt="logo2" id="logo2">        
+        <img src="assets/star1.png" alt="star1" id="star1" class="stars">
+        <img src="assets/star2.png" alt="star2" id="star2" class="stars">
+        <img src="assets/star3.png" alt="star3" id="star3" class="stars">
+
+        <img src="assets/product_text.png" alt="product_text" id="product_text">
+        <img src="assets/product.png" alt="product" id="product">
+
+        <img src="assets/cta.png" alt="cta" id="cta">
+    </div>
+
+    <script>
+        function myFunction() {
+
+        var t1 = gsap.timeline({repeat: -1, repeatDelay: 5});
+        // var t1 = gsap.timeline({});
+        var t2 = gsap.timeline({});
+
+        t1
+        .to('img', {duration: 0, 'display': 'block'})
+
+        .to('#deka_logo2', {duration: 0.5, opacity: 1, ease: 'power2.out'}, '+=0.25')
+        .to('#deka_logo2', {duration: 0.4, x: -378, y: -73, scale: 0.72, ease: 'power2.in'}, '+=0.15')
+
+        .add('f11')
+        .to('#deka_logo2', {duration: 0.3, opacity: 0, ease: 'power2.in'}, 'f11')
+        .to('#deka_logo', {duration: 0.35, opacity: 1, ease: 'power2.out'}, 'f11')
+
+        .add('f2')
+        .to('#product_text', {duration: 0.5, opacity: 1, x: 0, ease: 'power3.out'}, 'f2')
+        .to('#product', {duration: 0.5, opacity: 1, x: 0, y: 0, ease: 'power3.out'}, 'f2')
+        .to('#logo2', {duration: 0.45, opacity: 1, ease: 'power2.out'}, 'f2')
+        .to('#cta', {duration: 0.5, y: 0, ease: 'power3.out'}, 'f2+=0.15')
+        .to('#key_visual2', {rotation: 48}, 'f2+=0.85')
+
+        .add('f4', '+=2')
+        .to('#product_text', {duration: 0.5, opacity: 0, x: -10, ease: 'power3.in'}, 'f4')
+        .to('#product', {duration: 0.5, opacity: 0, x: 30, y: 20, ease: 'power3.in'}, 'f4')
+        .to('#logo2', {duration: 0.35, opacity: 0, ease: 'power0.none'}, 'f4+=0.15')
+        .to('#key_visual_all', {duration: 0.5, opacity: 1, ease: 'power2.out'}, 'f4+=0.2')
+        .to('#key_visual2', {duration: .75, rotation: 0, opacity: 1, ease: 'power2.out'}, 'f4+=0.4')
+
+        .to('#key_visual_all', {duration: 0.5, scale: 1, x: 0, y: 0, ease: 'power2.out'})
+
+        .to('.allen', {duration: 0.35, opacity: 1, stagger: 0.05, ease: 'power2.out'})
+        .to('.beste', {duration: 0.35, opacity: 1, stagger: 0.05, ease: 'power2.out'})
+        .to('.voor', {duration: 0.35, opacity: 1, stagger: 0.05, ease: 'power2.out'})
+        .to('.feest, .degan', {duration: 0.35, opacity: 1, stagger: 0.05, ease: 'power2.out'})
+
+        .add('f5', '+=0.5')
+        .to('#star1', {duration: 0.5, opacity: 1, ease: 'power2.out'}, 'f5+=0.5')
+        .to('#star1', {duration: 0.5, opacity: 0, ease: 'power2.in'}, 'f5+=0.65')
+        .to('#star2', {duration: 0.5, opacity: 1, ease: 'power2.out'}, 'f5+=0.8')
+        .to('#star2', {duration: 0.5, opacity: 0, ease: 'power2.in'}, 'f5+=.95')
+        .to('#star3', {duration: 0.5, opacity: 1, ease: 'power2.out'}, 'f5+=.9')
+        .to('#star3', {duration: 0.5, opacity: 0, ease: 'power2.in'}, 'f5+=1.2')
+        .to('.stars', {opacity: 0}, 'f1+=1.5')
+
+        .to('#cta', {duration: 0.35, y: 5, yoyo: true, repeat: 3, ease: 'power2.inout'}, '+=0.5')
+
+        }
+
+    </script>
+
+
+    <script type="text/javascript">
+        var clickTag = "https://www.dekamarkt.nl/";
+        var banner = document.getElementById("banner");
+        banner.style.cursor = "pointer";
+        banner.addEventListener("click", goURL);
+        function goURL() {
+            window.open(clickTag);
+        }
+    </script>
+</body>
+</html>
