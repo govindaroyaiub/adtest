@@ -72,7 +72,7 @@ var bottomTab = document.getElementById('bottomSlider');
                     .add('f1')
                     .to('.topbannerSection', {
                         duration: 0.7,
-                        y: '68%',
+                        y: '67%',
                         ease: 'power1.out'
                     }, 'f1')
                     .to('#top_arrow', {

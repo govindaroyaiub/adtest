@@ -4,102 +4,25 @@
     --sspp-interscroller-element-top: 100px;
 }
 
-@media only screen and (min-width: 960px) {
-    /* styles for browsers larger than 960px; */
-}
-
-@media only screen and (min-width: 1440px) {
-
-    #mobileBottomBanner{
-        display: none;
-    }
-    .bottomBannerSection {
-        display: flex;
-        flex-direction: column;
-        width: 66%;
-        min-width: 66%;
-        position: fixed;
-        text-align: center;
-        left: 17%;
-        z-index: 1000;
-        justify-content: center;
-        bottom: -250px;
-        top: auto;
-        transform: translateY(-80%);
-        -webkit-transform: translateY(-80%);
-        -moz-transform: translateY(-80%);
-        -ms-transform: translateY(-80%);
-        -o-transform: translateY(-80%);
-    }
-
-    .stickyBannerBottom1 {
-        position: relative;
-        top: 6px;
-    }
-
-    #bottomPlanetnine {
-        position: relative;
-        top: 0;
-        float: left;
-        width: 14%;
-        height: auto;
-        margin-left: 0.15px;
-    }
-
-    #bottomSlider {
-        position: relative;
-        top: 0;
-        width: 6%;
-        float: right;
-        color: black;
-        margin-right: 0.15px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #arrow_bottom_right_top {
-        position: absolute;
-        width: 30%;
-        height: auto;
-        top: 30%;
-        left: 50%;
-        transform-origin: center;
-    }
-
-    .stickyBannerBottom2 {
-        width: 100%;
-        flex: 1;
-        height: auto;
-        padding: 6px 0 2px 0;
-        justify-content: center;
-        text-align: center;
-        background-color: rgba(238, 237, 237, 0.8);
-    }
-}
-
-@media only screen and (min-width: 2000px) {
-    /* for sumo sized (mac) screens */
-}
-
-@media only screen and (max-device-width: 480px) {
-
-    /* styles for mobile browsers smaller than 480px; (iPhone) */
+/* // X-Small devices (portrait phones, less than 576px) */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
     .topbannerSection {
         display: flex;
         flex-direction: column;
         width: 100%;
         position: fixed;
         left: 0;
-        top: -11px;
+        top: -10px;
         z-index: 100;
-        transform: translateY(68%);
-        -webkit-transform: translateY(68%);
-        -moz-transform: translateY(68%);
-        -ms-transform: translateY(68%);
-        -o-transform: translateY(68%);
+        transform: translateY(67%);
+        -webkit-transform: translateY(67%);
+        -moz-transform: translateY(67%);
+        -ms-transform: translateY(67%);
+        -o-transform: translateY(67%);
     }
 
     .stickyBannerTop1 {
+        position: relative;
         width: 100%;
         flex: 1;
         height: auto;
@@ -111,42 +34,33 @@
     }
 
     .stickyBannerTop2 {
-        flex: 1;
-        width: 100%;
-        height: auto;
         position: relative;
-        max-width: 400px;
+        top: 1px;
     }
 
-    #top_left_down,
-    #tab_right_top_down {
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-    }
-
-    #tab_bottom_left {
+    .topTab {
         position: relative;
+        top: 0;
         width: 14%;
-        height: auto;
-        bottom: 0;
-        left: 0;
-        margin-left: 0.15px;
+        float: right;
+        margin-right: 0.15px;
+        align-items: center;
+        justify-content: center;
     }
 
     #top_arrow {
         position: absolute;
-        top: 7px;
-        left: 10px;
-        width: 5%;
+        width: 30%;
         height: auto;
-        transform: rotate(180deg);
+        top: 22%;
+        left: 50%;
         transform-origin: center;
+        transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
         -moz-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
         -o-transform: rotate(180deg);
-    }
+}
 
     .bottomBannerSection {
         display: flex;
@@ -434,20 +348,26 @@
         -o-transform: rotate(180deg);
     }
 
-    #desktopBottomBanner{
+    #desktopBottomBanner {
         display: none;
     }
 }
 
-@media only screen and (device-width: 768px) {
-    /* default iPad screens */
+/* Small devices (landscape phones, less than 768px) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .topbannerSection, .bottomBannerSection{
+        display: none;
+    }
 }
 
-/* different techniques for iPad screening */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-    /* For portrait layouts only */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .topbannerSection, .bottomBannerSection{
+        display: none;
+    }
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-    /* For landscape layouts only */
+@media only screen and (min-width: 992px){
+    .topbannerSection, .bottomBannerSection{
+        display: none;
+    }
 }
